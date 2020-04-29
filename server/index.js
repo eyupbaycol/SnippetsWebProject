@@ -8,9 +8,12 @@ const app = express();
 app.use(bodyParser.json());
 app.use(cors());
 
+//db conneciton
+const db = require("./helper/db")();
+
 //routes
-const posts = require('./routes/api/post');
-app.use('/api/posts', posts);
+const newAccount = require('./routes/api/newAccount');
+app.use('/newAccount', newAccount);
 
 const port = process.env.PORT || 5000;
 
