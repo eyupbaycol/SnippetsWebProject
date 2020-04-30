@@ -12,8 +12,8 @@ app.use(cors());
 const db = require("./helper/db")();
 
 //routes
-const newAccount = require('./routes/api/newAccount');
-app.use('/newAccount', newAccount);
+const User = require('./routes/api/User');
+app.use('/', User);
 
 const port = process.env.PORT || 5000;
 
