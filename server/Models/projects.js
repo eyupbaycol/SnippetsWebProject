@@ -11,10 +11,6 @@ const projectsSchema = new Schema({
     type:String,
     required:true
   },
-  createdUser : {
-    type:String,
-    required:true
-  },
   createdAt: {
     type: Date,
     default: Date.now
